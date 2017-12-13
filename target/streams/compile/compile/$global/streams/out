@@ -1,0 +1,15 @@
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab10/app/views/addCustomer.scala.html:19:45: missing argument list for method index in class ReverseHomeController[0m
+[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
+[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `index _` or `index(_)` instead of `index`.[0m
+[0m[[0m[31merror[0m] [0m[0m            <a href="@routes.HomeController.index">[0m
+[0m[[0m[31merror[0m] [0m[0m                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab10/app/views/index.scala.html:3:35: not found: value categories[0m
+[0m[[0m[31merror[0m] [0m[0m@(products: List[models.Product], categories: List[models.Category])[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab10/app/views/index.scala.html:12:19: not found: value categories[0m
+[0m[[0m[31merror[0m] [0m[0m        @for(c <- categories) {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab10/app/views/index.scala.html:64:14: value getCategory is not a member of models.Product[0m
+[0m[[0m[31merror[0m] [0m[0m      <td>@p.getCategory.getName</td> [0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

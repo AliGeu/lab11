@@ -1,0 +1,6 @@
+run
+exit
+h2-browser
+sbt
+exit
+run
