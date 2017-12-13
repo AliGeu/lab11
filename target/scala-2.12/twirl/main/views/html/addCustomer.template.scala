@@ -48,7 +48,7 @@ Seq[Any](format.raw/*1.39*/("""
   
         """),format.raw/*17.9*/("""<div class="actions">
             <input type="submit" value="Add/Update Customer" class="btn btn-primary">
-            <a href=""""),_display_(/*19.23*/routes/*19.29*/.HomeController.index),format.raw/*19.50*/("""">
+            <a href=""""),_display_(/*19.23*/routes/*19.29*/.HomeController.index(0)),format.raw/*19.53*/("""">
                 <button type="button" class="btn btn-warning">Cancel</button>
             </a>
         </div>
@@ -69,10 +69,10 @@ Seq[Any](format.raw/*1.39*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 12 16:34:07 GMT 2017
-                  SOURCE: /home/wdd/webapps/lab10/app/views/addCustomer.scala.html
-                  HASH: d75505fb117a8409cc353d6cac07c24420501f62
-                  MATRIX: 969->1|1079->41|1124->38|1152->57|1179->59|1207->79|1246->81|1277->86|1347->131|1456->231|1496->233|1532->270|1569->369|1606->379|1619->383|1650->393|1688->404|1785->480|1825->493|1911->558|1950->570|2107->700|2122->706|2164->727|2312->845|2341->863|2374->890
+                  DATE: Wed Dec 13 11:46:01 GMT 2017
+                  SOURCE: /home/wdd/webapps/lab 10 ctd/app/views/addCustomer.scala.html
+                  HASH: f7b5afb9cb11c2db1b8aed4766ce56a5b3443a52
+                  MATRIX: 969->1|1079->41|1124->38|1152->57|1179->59|1207->79|1246->81|1277->86|1347->131|1456->231|1496->233|1532->270|1569->369|1606->379|1619->383|1650->393|1688->404|1785->480|1825->493|1911->558|1950->570|2107->700|2122->706|2167->730|2315->848|2344->866|2377->893
                   LINES: 28->1|31->3|34->1|36->4|37->5|37->5|37->5|38->6|40->8|40->8|40->8|41->9|42->10|43->11|43->11|43->11|45->13|45->13|47->15|47->15|49->17|51->19|51->19|51->19|55->23|55->23|56->24
                   -- GENERATED --
               */

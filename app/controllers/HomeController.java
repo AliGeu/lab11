@@ -72,7 +72,7 @@ public class HomeController extends Controller {
                         newProduct.update();
                         flash("success", "Product " + newProduct.getName() + " was updated");
                     }
-                    return redirect(controllers.routes.HomeController.index());
+                    return redirect(controllers.routes.HomeController.index(0));
                 }
             }  
     

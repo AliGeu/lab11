@@ -36,9 +36,10 @@ public class Product extends Model {
 
     }
     //Constructor to initialise object
-    public Product(Long id, String name, String description, int stock, double price){
+    public Product(Long id, String name, Category category, String description, int stock, double price){
         this.id=id;
         this.name=name;
+        this.category=category;
         this.description=description;
         this.stock=stock;
         this.price=price;
@@ -51,6 +52,10 @@ public class Product extends Model {
 
     public String getName() {
         return name;
+    }
+
+    public Category getCategory() {
+        return category;
     }
     
     public String getDescription() {
@@ -68,6 +73,10 @@ public class Product extends Model {
    public void setName(String name) {
        this.name=name;
    }
+
+   public void setCategory(Category category) {
+    this.category=category;
+}
 
    public void setDescription(String description) {
     this.description=description;

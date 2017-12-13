@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/webapps/lab10/conf/routes
-// @DATE:Wed Dec 13 10:51:34 GMT 2017
+// @SOURCE:/home/wdd/webapps/lab 10 ctd/conf/routes
+// @DATE:Wed Dec 13 11:46:01 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -9,10 +9,10 @@ import play.api.routing.JavaScriptReverseRoute
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:8
+// @LINE:9
 package controllers.javascript {
 
-  // @LINE:8
+  // @LINE:9
   class ReverseHomeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -20,7 +20,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:16
     def addProductSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addProductSubmit",
       """
@@ -30,7 +30,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:18
     def addCustomer: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addCustomer",
       """
@@ -40,7 +40,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:20
     def addCustomerSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addCustomerSubmit",
       """
@@ -50,7 +50,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:22
     def deleteProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.deleteProduct",
       """
@@ -60,7 +60,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:25
+    // @LINE:26
     def updateProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.updateProduct",
       """
@@ -70,7 +70,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:24
     def deleteCustomer: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.deleteCustomer",
       """
@@ -80,7 +80,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:30
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
@@ -90,7 +90,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:27
+    // @LINE:28
     def updateCustomer: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.updateCustomer",
       """
@@ -100,7 +100,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:14
     def addProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addProduct",
       """
@@ -110,7 +110,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:8
+    // @LINE:9
     def customer: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.customer",
       """
@@ -122,7 +122,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:11
+  // @LINE:12
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -130,7 +130,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:12
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

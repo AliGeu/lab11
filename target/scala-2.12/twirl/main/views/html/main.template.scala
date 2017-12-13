@@ -126,8 +126,8 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 12 16:34:07 GMT 2017
-                  SOURCE: /home/wdd/webapps/lab10/app/views/main.scala.html
+                  DATE: Wed Dec 13 11:46:01 GMT 2017
+                  SOURCE: /home/wdd/webapps/lab 10 ctd/app/views/main.scala.html
                   HASH: 09918b04fd0e8d82e274ddb0c968bfdeb7753a89
                   MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|2005->802|2032->809|2061->811|2247->970|2262->976|2323->1016
                   LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|87->55|87->55|89->57|109->77|109->77|109->77
