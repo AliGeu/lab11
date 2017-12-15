@@ -1,6 +1,6 @@
-@(products: List[models.Product], categories: List[models.Category])
+@(products: List[models.Product], categories: List[models.Category], user: models.users.User)
 
-@main("Products") {
+@main("Products", user) {
  <p class="lead">Product Catalogue</p>
   <div class="row">
     <div class="col-sm-2">
@@ -68,15 +68,17 @@
       <td class="numeric">&euro; @("%.2f".format(p.getPrice))</td>
 
       <td>
+          @if(user != null && user.getRole  == "admin") {  
         <a href="@routes.HomeController.updateProduct(p.getId)" class="btn-xs btn-danger">
           <span class="glyphicon glyphicon-pencil"></span>
-        </a>
+        </a>}
     </td>
 
       <td>
+          @if(user != null && user.getRole  == "admin") {  
           <a href="@routes.HomeController.deleteProduct(p.getId)" class="btn-xs btn-danger" onclick="return confirmDel();">
             <span class="glyphicon glyphicon-trash"></span>
-          </a>
+          </a> }
       </td>
 
     
@@ -87,15 +89,19 @@
   
   </table>
   <p> 
+     
+    @if(user != null && user.getRole  == "admin") {       
     <a href="@routes.HomeController.addProduct()">
       <button class="btn btn-primary">Add a product</button>
-    </a>
+    </a> }
+  
   </p>
 
   <p> 
+    @if(user != null && user.getRole == "admin") {
     <a href="@routes.HomeController.addCustomer()">
       <button class="btn btn-primary">Add a customer</button>
-    </a>
+    </a> }
   </p>
 </div>
 </div>

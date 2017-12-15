@@ -28,3 +28,9 @@ GET     /updateProduct/:id               controllers.HomeController.updateProduc
 GET     /updateCustomer/:id               controllers.HomeController.updateCustomer(id:Long)
 
 GET     /                                  controllers.HomeController.index(cat:Long?=0L)
+
+GET     /login                                  controllers.LoginController.login
+
+POST     /loginSubmit                                  controllers.LoginController.loginSubmit
+
+GET     /logout                                  controllers.LoginController.logout

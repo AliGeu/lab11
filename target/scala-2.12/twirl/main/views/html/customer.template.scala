@@ -22,17 +22,17 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object customer extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[List[models.Customer],play.twirl.api.HtmlFormat.Appendable] {
+object customer extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[List[models.Customer],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(customer: List[models.Customer]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(customer: List[models.Customer], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.35*/("""
+Seq[Any](format.raw/*1.60*/("""
 
-"""),_display_(/*3.2*/main("Customer")/*3.18*/ {_display_(Seq[Any](format.raw/*3.20*/("""
+"""),_display_(/*3.2*/main("Customer", user)/*3.24*/ {_display_(Seq[Any](format.raw/*3.26*/("""
  """),format.raw/*4.2*/("""<p class="lead">Customers</p>
   
 <table class="table table-bordered table-hover table-condensed">
@@ -87,9 +87,9 @@ Seq[Any](format.raw/*1.35*/("""
     }
   }
 
-  def render(customer:List[models.Customer]): play.twirl.api.HtmlFormat.Appendable = apply(customer)
+  def render(customer:List[models.Customer],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(customer,user)
 
-  def f:((List[models.Customer]) => play.twirl.api.HtmlFormat.Appendable) = (customer) => apply(customer)
+  def f:((List[models.Customer],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (customer,user) => apply(customer,user)
 
   def ref: this.type = this
 
@@ -98,10 +98,10 @@ Seq[Any](format.raw/*1.35*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 11:46:01 GMT 2017
+                  DATE: Fri Dec 15 15:53:11 GMT 2017
                   SOURCE: /home/wdd/webapps/lab 10 ctd/app/views/customer.scala.html
-                  HASH: 727137c799df6a365b754f18be8e85eb8e17347d
-                  MATRIX: 966->1|1094->34|1122->37|1146->53|1185->55|1213->57|1489->355|1521->361|1553->377|1593->379|1626->385|1706->438|1716->439|1743->445|1794->469|1804->470|1833->478|1896->514|1911->520|1971->559|2139->700|2154->706|2214->745|2403->904|2432->922|2465->928|2524->957
+                  HASH: 1ceb5a7ca0ab63423beff4fa17e97a21f34e93ee
+                  MATRIX: 984->1|1137->59|1165->62|1195->84|1234->86|1262->88|1538->386|1570->392|1602->408|1642->410|1675->416|1755->469|1765->470|1792->476|1843->500|1853->501|1882->509|1945->545|1960->551|2020->590|2188->731|2203->737|2263->776|2452->935|2481->953|2514->959|2573->988
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|55->23|56->24|56->24|56->24|58->26|62->30|62->30|62->30|64->32|64->32|64->32|67->35|67->35|67->35|73->41|73->41|73->41|79->47|79->47|81->49|85->53
                   -- GENERATED --
               */

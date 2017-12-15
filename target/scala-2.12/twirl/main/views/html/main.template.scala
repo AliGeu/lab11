@@ -22,15 +22,15 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,Html,play.twirl.api.HtmlFormat.Appendable] {
+object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.User,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(title: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(title: String, user: models.users.User)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.32*/("""
+Seq[Any](format.raw/*1.57*/("""
 
 """),format.raw/*3.1*/("""<!DOCTYPE html>
 
@@ -52,61 +52,71 @@ Seq[Any](format.raw/*1.32*/("""
 
 <body>
 
-<nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse">
 
-<div class="container-fluid">
+        <div class="container-fluid">
 
-<div class="navbar-header">
+         <div class="navbar-header">
 
-<a class="navbar-brand" href="#">Online Shop</a>
+        <a class="navbar-brand" href="#">Online Shop</a>
 
-</div>
+         </div>
 
-<ul class="nav navbar-nav">
+         <ul class="nav navbar-nav">
 
-<li class="active"><a href="/">Products</a></li>
+            <li """),_display_(/*35.18*/if(title =="Products")/*35.40*/ {_display_(Seq[Any](format.raw/*35.42*/("""class="active"""")))}),format.raw/*35.57*/(""">
+                <a href=""""),_display_(/*36.27*/routes/*36.33*/.HomeController.index()),format.raw/*36.56*/("""">Products</a>   
+            </li>
 
-<li><a href="#">Services</a></li>
+            <li><a href="#">Services</a></li>
 
-<li><a href="#">Contact</a></li>
+            <li><a href="#">Contact</a></li>
 
-<li><a href="/customer">Customers</a></li>
+            <li><a href="/customer">Customers</a></li>
 
-</ul>
+            <li """),_display_(/*45.18*/if(title=="Login")/*45.36*/{_display_(Seq[Any](format.raw/*45.37*/("""class="active"""")))}),format.raw/*45.52*/(""">
+                """),_display_(/*46.18*/if(user != null)/*46.34*/ {_display_(Seq[Any](format.raw/*46.36*/("""
+                """),format.raw/*47.17*/("""<a href=""""),_display_(/*47.27*/routes/*47.33*/.LoginController.logout()),format.raw/*47.58*/("""">Logout</a>
+                """)))}/*48.19*/else/*48.24*/{_display_(Seq[Any](format.raw/*48.25*/("""
+                """),format.raw/*49.17*/("""<a href=""""),_display_(/*49.27*/routes/*49.33*/.LoginController.login()),format.raw/*49.57*/("""">Login</a>
+                """)))}),format.raw/*50.18*/("""    
+            """),format.raw/*51.13*/("""</li>
 
-</div>
+       </ul>
 
-</nav>
+    </div>
 
-<container>
+    </nav>
 
-<row>
+    <container>
 
-<div class="col-md-12">
+    <row>
 
-"""),_display_(/*55.2*/content),format.raw/*55.9*/("""
+    <div class="col-md-12">
 
-"""),format.raw/*57.1*/("""</div>
+    """),_display_(/*65.6*/content),format.raw/*65.13*/("""
 
-</row>
+    """),format.raw/*67.5*/("""</div>
 
-</container>
+    </row>
 
-<container>
+    </container>
 
-<row>
+    <container>
 
-<div class="col-md-12">
+    <row>
 
-Copyright <strong>Online Shop</strong>
+    <div class="col-md-12">
 
-</div>
+    Copyright <strong>Online Shop</strong>
 
-</row>
+    </div>
 
-</container>
+    </row>
 
-<script src=""""),_display_(/*77.15*/routes/*77.21*/.Assets.versioned("javascripts/main.js")),format.raw/*77.61*/(""""></script>
+    </container>
+
+    <script src=""""),_display_(/*87.19*/routes/*87.25*/.Assets.versioned("javascripts/main.js")),format.raw/*87.65*/(""""></script>
 
 </body>
 
@@ -115,9 +125,9 @@ Copyright <strong>Online Shop</strong>
     }
   }
 
-  def render(title:String,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title)(content)
+  def render(title:String,user:models.users.User,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title,user)(content)
 
-  def f:((String) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title) => (content) => apply(title)(content)
+  def f:((String,models.users.User) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title,user) => (content) => apply(title,user)(content)
 
   def ref: this.type = this
 
@@ -126,11 +136,11 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 11:46:01 GMT 2017
+                  DATE: Fri Dec 15 16:18:13 GMT 2017
                   SOURCE: /home/wdd/webapps/lab 10 ctd/app/views/main.scala.html
-                  HASH: 09918b04fd0e8d82e274ddb0c968bfdeb7753a89
-                  MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|2005->802|2032->809|2061->811|2247->970|2262->976|2323->1016
-                  LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|87->55|87->55|89->57|109->77|109->77|109->77
+                  HASH: 40560d7bb48bb191e2d6f6ec3154ee996009c774
+                  MATRIX: 970->1|1120->56|1148->58|1264->147|1290->152|1489->324|1504->330|1566->371|1881->659|1912->681|1952->683|1998->698|2053->726|2068->732|2112->755|2342->958|2369->976|2408->977|2454->992|2500->1011|2525->1027|2565->1029|2610->1046|2647->1056|2662->1062|2708->1087|2757->1118|2770->1123|2809->1124|2854->1141|2891->1151|2906->1157|2951->1181|3011->1210|3056->1227|3189->1334|3217->1341|3250->1347|3476->1546|3491->1552|3552->1592
+                  LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|67->35|67->35|67->35|67->35|68->36|68->36|68->36|77->45|77->45|77->45|77->45|78->46|78->46|78->46|79->47|79->47|79->47|79->47|80->48|80->48|80->48|81->49|81->49|81->49|81->49|82->50|83->51|97->65|97->65|99->67|119->87|119->87|119->87
                   -- GENERATED --
               */
           

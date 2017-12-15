@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/lab 10 ctd/conf/routes
-// @DATE:Wed Dec 13 11:46:01 GMT 2017
+// @DATE:Fri Dec 15 15:44:31 GMT 2017
 
 import play.api.mvc.Call
 
@@ -77,6 +77,33 @@ package controllers {
     def customer(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "customer")
+    }
+  
+  }
+
+  // @LINE:32
+  class ReverseLoginController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:34
+    def loginSubmit(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "loginSubmit")
+    }
+  
+    // @LINE:36
+    def logout(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "logout")
+    }
+  
+    // @LINE:32
+    def login(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "login")
     }
   
   }

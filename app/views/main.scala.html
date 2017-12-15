@@ -1,4 +1,4 @@
-@(title: String)(content: Html)
+@(title: String, user: models.users.User)(content: Html)
 
 <!DOCTYPE html>
 
@@ -20,61 +20,71 @@
 
 <body>
 
-<nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse">
 
-<div class="container-fluid">
+        <div class="container-fluid">
 
-<div class="navbar-header">
+         <div class="navbar-header">
 
-<a class="navbar-brand" href="#">Online Shop</a>
+        <a class="navbar-brand" href="#">Online Shop</a>
 
-</div>
+         </div>
 
-<ul class="nav navbar-nav">
+         <ul class="nav navbar-nav">
 
-<li class="active"><a href="/">Products</a></li>
+            <li @if(title =="Products") {class="active"}>
+                <a href="@routes.HomeController.index()">Products</a>   
+            </li>
 
-<li><a href="#">Services</a></li>
+            <li><a href="#">Services</a></li>
 
-<li><a href="#">Contact</a></li>
+            <li><a href="#">Contact</a></li>
 
-<li><a href="/customer">Customers</a></li>
+            <li><a href="/customer">Customers</a></li>
 
-</ul>
+            <li @if(title=="Login"){class="active"}>
+                @if(user != null) {
+                <a href="@routes.LoginController.logout()">Logout</a>
+                } else {
+                <a href="@routes.LoginController.login()">Login</a>
+                }    
+            </li>
 
-</div>
+       </ul>
 
-</nav>
+    </div>
 
-<container>
+    </nav>
 
-<row>
+    <container>
 
-<div class="col-md-12">
+    <row>
 
-@content
+    <div class="col-md-12">
 
-</div>
+    @content
 
-</row>
+    </div>
 
-</container>
+    </row>
 
-<container>
+    </container>
 
-<row>
+    <container>
 
-<div class="col-md-12">
+    <row>
 
-Copyright <strong>Online Shop</strong>
+    <div class="col-md-12">
 
-</div>
+    Copyright <strong>Online Shop</strong>
 
-</row>
+    </div>
 
-</container>
+    </row>
 
-<script src="@routes.Assets.versioned("javascripts/main.js")"></script>
+    </container>
+
+    <script src="@routes.Assets.versioned("javascripts/main.js")"></script>
 
 </body>
 

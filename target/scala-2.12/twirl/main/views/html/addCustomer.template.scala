@@ -22,19 +22,19 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object addCustomer extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[Form[models.Customer],play.twirl.api.HtmlFormat.Appendable] {
+object addCustomer extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Form[models.Customer],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(customerForm: Form[models.Customer]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(customerForm: Form[models.Customer], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*3.2*/import helper._
 
 
-Seq[Any](format.raw/*1.39*/("""
+Seq[Any](format.raw/*1.64*/("""
 
 """),format.raw/*4.1*/("""
-"""),_display_(/*5.2*/main("Add customer")/*5.22*/ {_display_(Seq[Any](format.raw/*5.24*/("""
+"""),_display_(/*5.2*/main("Add customer", user)/*5.28*/ {_display_(Seq[Any](format.raw/*5.30*/("""
     """),format.raw/*6.5*/("""<p class="lead">Add a new customer</p>
 
     """),_display_(/*8.6*/form(action=routes.HomeController.addCustomerSubmit(), 'class -> "form-horizontal", 'role -> "form")/*8.106*/ {_display_(Seq[Any](format.raw/*8.108*/("""
@@ -58,9 +58,9 @@ Seq[Any](format.raw/*1.39*/("""
     }
   }
 
-  def render(customerForm:Form[models.Customer]): play.twirl.api.HtmlFormat.Appendable = apply(customerForm)
+  def render(customerForm:Form[models.Customer],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(customerForm,user)
 
-  def f:((Form[models.Customer]) => play.twirl.api.HtmlFormat.Appendable) = (customerForm) => apply(customerForm)
+  def f:((Form[models.Customer],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (customerForm,user) => apply(customerForm,user)
 
   def ref: this.type = this
 
@@ -69,10 +69,10 @@ Seq[Any](format.raw/*1.39*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 11:46:01 GMT 2017
+                  DATE: Fri Dec 15 15:52:20 GMT 2017
                   SOURCE: /home/wdd/webapps/lab 10 ctd/app/views/addCustomer.scala.html
-                  HASH: f7b5afb9cb11c2db1b8aed4766ce56a5b3443a52
-                  MATRIX: 969->1|1079->41|1124->38|1152->57|1179->59|1207->79|1246->81|1277->86|1347->131|1456->231|1496->233|1532->270|1569->369|1606->379|1619->383|1650->393|1688->404|1785->480|1825->493|1911->558|1950->570|2107->700|2122->706|2167->730|2315->848|2344->866|2377->893
+                  HASH: 36e704048a34cc088fe905dd74bc910183ef0e0b
+                  MATRIX: 987->1|1122->66|1167->63|1195->82|1222->84|1256->110|1295->112|1326->117|1396->162|1505->262|1545->264|1581->301|1618->400|1655->410|1668->414|1699->424|1737->435|1834->511|1874->524|1960->589|1999->601|2156->731|2171->737|2216->761|2364->879|2393->897|2426->924
                   LINES: 28->1|31->3|34->1|36->4|37->5|37->5|37->5|38->6|40->8|40->8|40->8|41->9|42->10|43->11|43->11|43->11|45->13|45->13|47->15|47->15|49->17|51->19|51->19|51->19|55->23|55->23|56->24
                   -- GENERATED --
               */

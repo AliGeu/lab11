@@ -1,6 +1,6 @@
-@(customer: List[models.Customer])
+@(customer: List[models.Customer], user: models.users.User)
 
-@main("Customer") {
+@main("Customer", user) {
  <p class="lead">Customers</p>
   
 <table class="table table-bordered table-hover table-condensed">
