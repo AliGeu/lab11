@@ -1,8 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab 10 ctd/app/models/Category.java:68:1: class, interface, or enum expected[0m
-[0m[[0m[31merror[0m] [0m[0mpublic static Map<String,String> options() {[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab 10 ctd/app/models/Category.java:71:1: class, interface, or enum expected[0m
-[0m[[0m[31merror[0m] [0m[0m    for(Category c: Category.findAll() {[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab 10 ctd/app/models/Category.java:73:1: class, interface, or enum expected[0m
-[0m[[0m[31merror[0m] [0m[0m    }[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab 10 ctd/app/models/Category.java:75:1: class, interface, or enum expected[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab 10 ctd/app/models/Category.java:75:2: `}' expected but eof found.[0m
 [0m[[0m[31merror[0m] [0m[0m}[0m
+[0m[[0m[31merror[0m] [0m[0m ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

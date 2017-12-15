@@ -15,7 +15,8 @@
         @select(
             productForm("category.id"),
             options(Category.options),
-            
+            '_label -> "Category", '_default -> "-- Choose a category --",
+            '_showConstraints -> false, 'class -> "form-control"
         )
         @inputText(productForm("stock"), '_label -> "Stock", 'class -> "form-control")
         @inputText(productForm("price"), '_label -> "Price", 'class -> "form-control")

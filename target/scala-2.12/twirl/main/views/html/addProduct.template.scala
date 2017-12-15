@@ -44,19 +44,25 @@ Seq[Any](format.raw/*1.37*/("""
 
         """),_display_(/*13.10*/inputText(productForm("name"), '_label -> "Name", 'class -> "form-control")),format.raw/*13.85*/("""
         """),_display_(/*14.10*/inputText(productForm("description"), '_label -> "Description", 'class -> "form-control")),format.raw/*14.99*/("""
-        """),_display_(/*15.10*/inputText(productForm("stock"), '_label -> "Stock", 'class -> "form-control")),format.raw/*15.87*/("""
-        """),_display_(/*16.10*/inputText(productForm("price"), '_label -> "Price", 'class -> "form-control")),format.raw/*16.87*/("""
+        """),_display_(/*15.10*/select(
+            productForm("category.id"),
+            options(Category.options),
+            '_label -> "Category", '_default -> "-- Choose a category --",
+            '_showConstraints -> false, 'class -> "form-control"
+        )),format.raw/*20.10*/("""
+        """),_display_(/*21.10*/inputText(productForm("stock"), '_label -> "Stock", 'class -> "form-control")),format.raw/*21.87*/("""
+        """),_display_(/*22.10*/inputText(productForm("price"), '_label -> "Price", 'class -> "form-control")),format.raw/*22.87*/("""
   
-        """),_display_(/*18.10*/inputText(productForm("id"), '_label -> "", 'hidden -> "hidden")),format.raw/*18.74*/("""
+        """),_display_(/*24.10*/inputText(productForm("id"), '_label -> "", 'hidden -> "hidden")),format.raw/*24.74*/("""
   
-        """),format.raw/*20.9*/("""<div class="actions">
+        """),format.raw/*26.9*/("""<div class="actions">
             <input type="submit" value="Add/update Product" class="btn btn-primary">
-            <a href=""""),_display_(/*22.23*/routes/*22.29*/.HomeController.index(0)),format.raw/*22.53*/("""">
+            <a href=""""),_display_(/*28.23*/routes/*28.29*/.HomeController.index(0)),format.raw/*28.53*/("""">
                 <button type="button" class="btn btn-warning">Cancel</button>
             </a>
         </div>
-    """)))}),format.raw/*26.6*/(""" """),format.raw/*26.24*/("""
-""")))}),format.raw/*27.27*/(""" """))
+    """)))}),format.raw/*32.6*/(""" """),format.raw/*32.24*/("""
+""")))}),format.raw/*33.27*/(""" """))
       }
     }
   }
@@ -72,11 +78,11 @@ Seq[Any](format.raw/*1.37*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 11:46:01 GMT 2017
+                  DATE: Fri Dec 15 14:06:25 GMT 2017
                   SOURCE: /home/wdd/webapps/lab 10 ctd/app/views/addProduct.scala.html
-                  HASH: 18af5dade98e20865d8cfcf8afae8099987c4a0d
-                  MATRIX: 967->1|1075->39|1120->36|1148->55|1175->57|1202->76|1241->78|1272->83|1351->137|1459->236|1499->238|1535->275|1572->374|1609->384|1622->388|1653->398|1691->409|1787->484|1824->494|1934->583|1971->593|2069->670|2106->680|2204->757|2244->770|2329->834|2368->846|2524->975|2539->981|2584->1005|2732->1123|2761->1141|2794->1168
-                  LINES: 28->1|31->3|34->1|36->4|37->5|37->5|37->5|38->6|40->8|40->8|40->8|41->9|42->10|43->11|43->11|43->11|45->13|45->13|46->14|46->14|47->15|47->15|48->16|48->16|50->18|50->18|52->20|54->22|54->22|54->22|58->26|58->26|59->27
+                  HASH: fd16053f0dced342df0f4b4831d42d139808b1ad
+                  MATRIX: 967->1|1075->39|1120->36|1148->55|1175->57|1202->76|1241->78|1272->83|1351->137|1459->236|1499->238|1535->275|1572->374|1609->384|1622->388|1653->398|1691->409|1787->484|1824->494|1934->583|1971->593|2228->829|2265->839|2363->916|2400->926|2498->1003|2538->1016|2623->1080|2662->1092|2818->1221|2833->1227|2878->1251|3026->1369|3055->1387|3088->1414
+                  LINES: 28->1|31->3|34->1|36->4|37->5|37->5|37->5|38->6|40->8|40->8|40->8|41->9|42->10|43->11|43->11|43->11|45->13|45->13|46->14|46->14|47->15|52->20|53->21|53->21|54->22|54->22|56->24|56->24|58->26|60->28|60->28|60->28|64->32|64->32|65->33
                   -- GENERATED --
               */
           
